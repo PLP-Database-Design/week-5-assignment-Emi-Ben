@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<% if(results.length ===0){%>
+    <p>There are no Patients</p>
+<%} else{%>
+    <table>
+        <thead>
+            <tr>
+                <th> Patient ID</th>
+                <th> First Name</th>
+                <th> Last Name</th>
+                <th> Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach(row => {%>
+                <tr>
+                    <td> <%= row.patient_id %> </td>
+                    <td> <%= row.first_name %> </td>
+                    <td> <%= row.last_name %> </td>
+                    <td> <%= row.date_of_birth %> </td>
+                </tr>
+                <%})%>
+        </tbody>
+        
+    </table>
+
+<%}%>
+
+
